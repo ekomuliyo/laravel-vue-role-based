@@ -20,6 +20,7 @@ DB_PASSWORD=YOUR_DATABASE_PASSWORD
 
 ### run project
 ```
+$ php artisan migrate --seed
 $ npm run watch
 $ php artisan serve
 ```
