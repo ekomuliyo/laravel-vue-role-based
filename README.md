@@ -5,9 +5,9 @@ a simple laravel vue application that has user rules Admin And Users
 ### setup project
 
 ```
+$ cp .env.example .env 
 $ npm install
 $ composer install
-$ cp .env.example .env 
 ```
 
 ### setup environment
