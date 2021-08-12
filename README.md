@@ -1,6 +1,6 @@
 ## laravel-vue-role-based
 
-a simple laravel vue application that has user rules Admin And Users
+A simple laravel vue application that has user rules Admin and Users, that build used Laravel 6 and Vue.js 2
 
 ### setup project
 
@@ -28,4 +28,4 @@ $ php artisan serve
 
 #### Source Tutorial
 
-[Create a SPA with role-based authentication with Laravel and Vue.js](https://medium.com/@ripoche.b/create-a-spa-with-role-based-authentication-with-laravel-and-vue-js-ac4b260b882f).
+[Create a SPA with role-based authentication with Laravel and Vue.js](https://medium.com/@ripoche.b/create-a-spa-with-role-based-authentication-with-laravel-and-vue-js-ac4b260b882f)
