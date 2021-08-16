@@ -5,6 +5,7 @@ A simple laravel vue application that has user rules Admin and Users, that build
 #### user testing
 1. admin@test.com
 2. uset@test.com
+
 password: secret
 
 ### setup project
