@@ -5,6 +5,16 @@ import Register from './pages/Register'
 import Login from './pages/Login'
 import Dashboard from './pages/user/Dashboard'
 import AdminDashboard from './pages/admin/Dashboard'
+import AdminEmployee from './pages/admin/Employee'
+
+const routesWithPrefix = (prefix, meta, routes) => {
+  return routes.map(route => {
+    route.path = `${prefix}${route.path}`
+    route.meta = meta;
+    return route
+  })
+}
+
 // Routes
 const routes = [
   {
@@ -31,6 +41,7 @@ const routes = [
       auth: false
     }
   },
+
   // USER ROUTES
   {
     path: '/dashboard',
@@ -40,15 +51,20 @@ const routes = [
       auth: true
     }
   },
+
   // ADMIN ROUTES
-  {
-    path: '/admin',
-    name: 'admin.dashboard',
-    component: AdminDashboard,
-    meta: {
-      auth: {roles: 2, redirect: {name: 'login'}, forbiddenRedirect: '/403'}
+  ...routesWithPrefix('/admin', { auth: { roles: 2, redirect: {name: 'login'}, forbiddenRedirect: '/403' } }, [
+    {
+      path: '/',
+      name: 'admin.dashboard',
+      component: AdminDashboard 
+    },
+    {
+      path: '/employee',
+      name: 'admin.employee',
+      component: AdminEmployee,
     }
-  },
+  ])
 ]
 
 const router = new VueRouter({

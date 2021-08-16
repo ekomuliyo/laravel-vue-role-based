@@ -63,6 +63,10 @@
             {
               name: 'Dashboard',
               path: 'admin.dashboard'
+            },
+            {
+              name: 'Employee',
+              path: 'admin.employee'
             }
           ]
         }

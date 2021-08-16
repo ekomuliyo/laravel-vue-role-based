@@ -9,6 +9,13 @@ import Index from './Index'
 import auth from './auth'
 import router from './router'
 
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+Vue.use(VueSweetalert2);
+
+// load css global
+import '../css/main.css';
+
 // Set Vue globally
 window.Vue = Vue
 

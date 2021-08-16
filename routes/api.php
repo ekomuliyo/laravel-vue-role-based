@@ -13,14 +13,19 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::group(['middleware' => 'auth:api'], function(){
+Route::group(['middleware' => 'auth:api'], function() {
     // Users
     Route::get('users', 'UserController@index')->middleware('isAdmin');
     Route::get('users/{id}', 'UserController@show')->middleware('isAdminOrSelf');
+});
+
+Route::prefix('employee')->group(function () {
+    Route::group(['middleware' => ['auth:api', 'isAdmin']], function() {
+        Route::get('/', 'EmployeeController@index');
+        Route::post('/add', 'EmployeeController@employeeAdd');
+        Route::post('/edit', 'EmployeeController@employeeEdit');
+        Route::post('/delete', 'EmployeeController@employeeDelete');
+    });
 });
 
 Route::prefix('auth')->group(function () {
