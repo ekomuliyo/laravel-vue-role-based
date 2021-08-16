@@ -1,6 +1,11 @@
-## laravel-vue-role-based
+## laravel-vue-role-based-todo
 
 A simple laravel vue application that has user rules Admin and Users, that build used Laravel 6 and Vue.js 2
+
+#### user testing
+1. admin@test.com
+2. uset@test.com
+password: secret
 
 ### setup project
 
