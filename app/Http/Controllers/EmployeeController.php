@@ -44,7 +44,7 @@ class EmployeeController extends Controller
     public function employeeEdit(Request $request) {
 
         $v = Validator::make($request->all(), [
-            'name'      => 'required|unique:employees,name',
+            'name'      => 'required',
             'birthdate' => 'required',
             'sex'       => 'required',
             'handphone' => 'required',
