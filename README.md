@@ -3,8 +3,8 @@
 A simple laravel vue application that has user rules Admin and Users, that build used Laravel 6 and Vue.js 2
 
 #### user testing
-1. admin@test.com
-2. user@test.com
+1. admin@admin.com
+2. user@user.com
 
 password: secret
 
