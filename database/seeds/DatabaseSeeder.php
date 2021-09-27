@@ -16,13 +16,13 @@ class DatabaseSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         User::create([
             'name' => 'Admin',
-            'email' => 'admin@test.com',
+            'email' => 'admin@admin.com',
             'password' => Hash::make('secret'),
             'role' => 2
         ]);
         User::create([
             'name' => 'User',
-            'email' => 'user@test.com',
+            'email' => 'user@user.com',
             'password' => Hash::make('secret'),
             'role' => 1
         ]);
